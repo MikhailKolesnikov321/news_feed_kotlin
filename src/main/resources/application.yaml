@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: news_feed_kt
+server:
+  port: '8081'
+  error:
+    whitelabel:
+      enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
