@@ -1,4 +1,9 @@
 package net.dunice.advanced.server.controllers
 
-class NewsController {
+import org.springframework.web.bind.annotation.RestController
+
+@RestController
+class NewsController() {
+
+
 }
