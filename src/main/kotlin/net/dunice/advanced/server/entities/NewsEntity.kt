@@ -5,11 +5,17 @@ import java.util.UUID
 
 @Table(name = "news")
 @Entity
-class NewsEntity {
+data class NewsEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    var id: UUID = UUID.randomUUID()
-    var image: String = ""
-    var title: String = ""
-    var description: String = ""
-}
+    private var id: UUID,
+
+    private var image: String,
+    @Column(nullable = false)
+    private var title: String,
+    private var description: String,
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id", nullable = false)
+    private var user: UserEntity
+)
