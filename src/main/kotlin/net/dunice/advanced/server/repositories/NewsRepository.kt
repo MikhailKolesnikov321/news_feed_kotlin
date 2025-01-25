@@ -11,6 +11,6 @@ import java.util.UUID
 @Repository
 interface NewsRepository : JpaRepository<NewsEntity, UUID> {
 
-    @Query
+    @Query("SELECT u FROM NewsEntity u WHERE u.id = :id")
     override fun findById(@Param("id") id: UUID): Optional<NewsEntity>
 }

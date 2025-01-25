@@ -12,13 +12,11 @@ import org.hibernate.validator.constraints.Length
 data class NewsRequest(
     @NotBlank(message = NEWS_IMAGE_HAS_TO_BE_PRESENT)
     @Length(min = 3, max = 130, message = NEWS_IMAGE_LENGTH_NOT_VALID)
-    private var image: String,
+    var image: String,
     @NotBlank(message = NEWS_DESCRIPTION_HAS_TO_BE_PRESENT)
     @Length(min = 3, max = 160, message = NEWS_DESCRIPTION_HAS_TO_BE_PRESENT)
-    private var description: String,
+    var description: String,
     @NotBlank(message = NEWS_TITLE_NOT_NULL)
     @Length(min = 3, max = 160, message = NEWS_TITLE_SIZE_NOT_VALID)
-    private var title: String,
-    @NotBlank(message = USER_ID_NOT_NULL)
-    private var userId: String
+    var title: String
 )

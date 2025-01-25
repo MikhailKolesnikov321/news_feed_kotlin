@@ -1,12 +1,12 @@
 package net.dunice.advanced.server.controllers.dto
 
-data class CreateNewsSuccessResponse(
-    private var data: Any,
-    private var statusCode: Int = 0,
-    private var success: Boolean = true,
+data class CreateNewsSuccessResponse<T>(
+    var data: T,
+    var statusCode: Int = 0,
+    var success: Boolean = true,
 ) {
     companion object {
-        fun ok(data: Any) = CreateNewsSuccessResponse(
+        fun <T> ok(data: T) = CreateNewsSuccessResponse(
             data = data,
             statusCode = 0,
             success = true

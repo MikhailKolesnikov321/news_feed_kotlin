@@ -7,8 +7,8 @@ import java.util.UUID
 @Entity
 data class UserEntity(
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private var id: UUID,
+    @GeneratedValue(generator = "UUID")
+    private var id: UUID? = null,
 
     @Column(nullable = false)
     private var name: String,
@@ -20,5 +20,5 @@ data class UserEntity(
     private var role: String,
 
     @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
-    private var news: MutableList<NewsEntity>
+    private var news: MutableList<NewsEntity> = mutableListOf()
 )
