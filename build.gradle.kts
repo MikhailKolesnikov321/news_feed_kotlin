@@ -4,6 +4,7 @@ plugins {
 	id("org.springframework.boot") version "3.4.1"
 	id("io.spring.dependency-management") version "1.1.7"
 	kotlin("plugin.jpa") version "1.9.25"
+	id("org.jetbrains.kotlin.kapt") version "2.1.0"
 }
 
 group = "net.dunice"
@@ -25,6 +26,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-actuator:3.4.1")
 	implementation("org.mapstruct:mapstruct:1.5.5.Final")
+	kapt("org.mapstruct:mapstruct-processor:1.5.5.Final")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	runtimeOnly("org.postgresql:postgresql")

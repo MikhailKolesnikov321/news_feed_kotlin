@@ -6,7 +6,6 @@ import net.dunice.advanced.server.validations.ValidationConstants.Companion.NEWS
 import net.dunice.advanced.server.validations.ValidationConstants.Companion.NEWS_IMAGE_LENGTH_NOT_VALID
 import net.dunice.advanced.server.validations.ValidationConstants.Companion.NEWS_TITLE_NOT_NULL
 import net.dunice.advanced.server.validations.ValidationConstants.Companion.NEWS_TITLE_SIZE_NOT_VALID
-import net.dunice.advanced.server.validations.ValidationConstants.Companion.USER_ID_NOT_NULL
 import org.hibernate.validator.constraints.Length
 
 data class NewsRequest(
